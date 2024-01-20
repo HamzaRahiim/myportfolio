@@ -19,20 +19,18 @@ const Boxes = () => {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-center items-center md:justify-between">
-        {dbdata.map((item, index) => {
-          return (
-            <div className="px-2" key={index}>
-              <Image
-                src={item.picName}
-                alt={item.altName}
-                width={230}
-                height={180}
-                className="rounded-lg border border-teal-950 mt-2 md:w-96 md:h-72"
-              />
-              <p className="text-center mb-4 pt-2">{item.title}</p>
-            </div>
-          );
-        })}
+        {dbdata.map((item, index) => (
+          <div className="px-2" key={index}>
+            <Image
+              src={item.picName}
+              alt={item.altName}
+              width={230}
+              height={180}
+              className="rounded-lg border border-teal-950 mt-2 md:w-96 md:h-72"
+            />
+            <p className="text-center mb-4 pt-2">{item.title}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
