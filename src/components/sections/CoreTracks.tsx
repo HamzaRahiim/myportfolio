@@ -15,7 +15,7 @@ const CoreTracks = () => {
           <Boxes />
           {/* Button for contact page  */}
           <button className="mt-4 ml-6 self-start hover:scale-105 duration-300">
-            <Button text="Contact Me" link="/contact" />
+            <Button text="Contact Me" link="/contactus" />
           </button>
         </div>
         <div className="relative"></div>
