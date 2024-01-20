@@ -1,24 +1,45 @@
 // making data that used
 const projectData = [
-  "Next.js and React front-end developer for fast business websites and applications.",
-
-  "Crafting unique and captivating designs to make your project stand out.",
-
-  "Open communication, sharing designs pre-implementation for your input.",
-
-  "Flexibility to incorporate client feedback and swift post-project revisions.",
-
-  "Tackling challenges proactively with a solutions-driven mindset.",
-
-  "Ensuring high-quality, polished projects with meticulous attention to detail.",
-
-  "Tailoring solutions to meet your business needs, prioritizing satisfaction.",
-
-  "Staying updated on industry trends to bring fresh and innovative ideas.",
-
-  "Efficient project management ensuring on-time delivery and respect for deadlines.",
-
-  "Providing ongoing support for post-launch updates, fostering a positive client-developer relationship.",
+  {
+    id: 1,
+    text: "Next.js and React front-end developer for fast business websites and applications.",
+  },
+  {
+    id: 2,
+    text: "Crafting unique and captivating designs to make your project stand out.",
+  },
+  {
+    id: 3,
+    text: "Open communication, sharing designs pre-implementation for your input.",
+  },
+  {
+    id: 4,
+    text: "Flexibility to incorporate client feedback and swift post-project revisions.",
+  },
+  {
+    id: 5,
+    text: "Tackling challenges proactively with a solutions-driven mindset.",
+  },
+  {
+    id: 6,
+    text: "Ensuring high-quality, polished projects with meticulous attention to detail.",
+  },
+  {
+    id: 7,
+    text: "Tailoring solutions to meet your business needs, prioritizing satisfaction.",
+  },
+  {
+    id: 8,
+    text: "Staying updated on industry trends to bring fresh and innovative ideas.",
+  },
+  {
+    id: 9,
+    text: "Efficient project management ensuring on-time delivery and respect for deadlines.",
+  },
+  {
+    id: 10,
+    text: "Providing ongoing support for post-launch updates, fostering a positive client-developer relationship.",
+  },
 ];
 
 const ProData = () => {
@@ -33,7 +54,7 @@ const ProData = () => {
         {projectData.map((item, index) => (
           <div key={index}>
             <h1>
-              {index + 1}. {item}
+              {item.id}. {item.text}
             </h1>
           </div>
         ))}
