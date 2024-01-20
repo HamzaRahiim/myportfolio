@@ -2,10 +2,10 @@ import nextjs from "@/assets/images/nextjsicon.png";
 import react from "@/assets/images/reactjs.jpeg";
 import nodejs from "@/assets/images/nodejs.jpg";
 import tailwind from "@/assets/images/tailwindcss.jpeg";
-import typescript from "@/assets/images/TS-logo.png";
-import javascript from "@/assets/images/JS-logo.png";
+import typescript from "@/assets/images/ts-logo.png";
+import javascript from "@/assets/images/js-logo.png";
 import git from "@/assets/images/git-logo.jpeg";
-import github from "@/assets/images/GitHub-Logo.png";
+import github from "@/assets/images/gitHub-Logo.png";
 import Image from "next/image";
 const dataOfSkills = [
   {
@@ -46,8 +46,8 @@ const Circle = () => {
   return (
     <main>
       <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 gap-y-6">
-        {dataOfSkills.map((skill) => (
-          <div key={skill.name} className="grid justify-center">
+        {dataOfSkills.map((skill, index) => (
+          <div key={index} className="grid justify-center">
             <div>
               <Image
                 src={skill.logo}

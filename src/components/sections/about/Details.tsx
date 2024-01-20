@@ -1,6 +1,6 @@
 import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
-import poster from "@/assets/images/Nextjs-poster.png";
+import poster from "@/assets/images/nextjs-poster.png";
 import Button from "@/components/shared/Button";
 const Details = () => {
   return (

@@ -1,44 +1,24 @@
 // making data that used
 const projectData = [
-  {
-    point:
-      "Next.js and React front-end developer for fast business websites and applications.",
-  },
-  {
-    point:
-      "Crafting unique and captivating designs to make your project stand out.",
-  },
-  {
-    point:
-      "Open communication, sharing designs pre-implementation for your input.",
-  },
-  {
-    point:
-      "Flexibility to incorporate client feedback and swift post-project revisions.",
-  },
-  {
-    point: "Tackling challenges proactively with a solutions-driven mindset.",
-  },
-  {
-    point:
-      "Ensuring high-quality, polished projects with meticulous attention to detail.",
-  },
-  {
-    point:
-      "Tailoring solutions to meet your business needs, prioritizing satisfaction.",
-  },
-  {
-    point:
-      "Staying updated on industry trends to bring fresh and innovative ideas.",
-  },
-  {
-    point:
-      "Efficient project management ensuring on-time delivery and respect for deadlines.",
-  },
-  {
-    point:
-      "Providing ongoing support for post-launch updates, fostering a positive client-developer relationship.",
-  },
+  "Next.js and React front-end developer for fast business websites and applications.",
+
+  "Crafting unique and captivating designs to make your project stand out.",
+
+  "Open communication, sharing designs pre-implementation for your input.",
+
+  "Flexibility to incorporate client feedback and swift post-project revisions.",
+
+  "Tackling challenges proactively with a solutions-driven mindset.",
+
+  "Ensuring high-quality, polished projects with meticulous attention to detail.",
+
+  "Tailoring solutions to meet your business needs, prioritizing satisfaction.",
+
+  "Staying updated on industry trends to bring fresh and innovative ideas.",
+
+  "Efficient project management ensuring on-time delivery and respect for deadlines.",
+
+  "Providing ongoing support for post-launch updates, fostering a positive client-developer relationship.",
 ];
 
 const ProData = () => {
@@ -53,7 +33,7 @@ const ProData = () => {
         {projectData.map((item, index) => (
           <div key={index}>
             <h1>
-              {index + 1}. {item.point}
+              {index + 1}. {item}
             </h1>
           </div>
         ))}

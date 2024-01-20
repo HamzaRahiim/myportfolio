@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import Logo from "/public/ca_using-removebg-preview.png";
-import Linkcomp from "../shared/Linkcomp";
-import Wrapper from "../shared/Wrapper";
+import Linkcomp from "@/components/shared/Linkcomp";
+import Wrapper from "@/components/shared/Wrapper";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 const Header = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -83,4 +84,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;
