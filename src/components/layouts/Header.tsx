@@ -55,28 +55,27 @@ const Header = () => {
             }
           >
             {/* In navbar the close button on smal screen  */}
-            <div
-              onClick={handleNav}
-              className="rounded-full shadow-lg self-start hover:cursor-pointer"
-            >
-              <AiOutlineClose size="30" />
-            </div>
-            {/* In navbar the links on smal screen  */}
-            <div className="mb-2">
-              <ul className="flex flex-col justify-center items-center space-y-4">
-                <li className="hover:border-b-2 border-blue-500">
-                  <Linkcomp text="Home" link="/" />
-                </li>
-                <li className="hover:border-b-2 border-blue-500">
-                  <Linkcomp text="About" link="/about" />
-                </li>
-                <li className="hover:border-b-2 border-blue-500">
-                  <Linkcomp text="Projects" link="/projects" />
-                </li>
-                <li className="hover:border-b-2 border-blue-500">
-                  <Linkcomp text="Contact Me" link="/contactus" />
-                </li>
-              </ul>
+            <div onClick={handleNav}>
+              <div className="rounded-full shadow-lg hover:cursor-pointer w-8">
+                <AiOutlineClose size="30" />
+              </div>
+              {/* In navbar the links on smal screen  */}
+              <div className="mb-2">
+                <ul className="flex flex-col justify-center items-center space-y-4">
+                  <li className="hover:border-b-2 border-blue-500">
+                    <Linkcomp text="Home" link="/" />
+                  </li>
+                  <li className="hover:border-b-2 border-blue-500">
+                    <Linkcomp text="About" link="/about" />
+                  </li>
+                  <li className="hover:border-b-2 border-blue-500">
+                    <Linkcomp text="Projects" link="/projects" />
+                  </li>
+                  <li className="hover:border-b-2 border-blue-500">
+                    <Linkcomp text="Contact Me" link="/contactus" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
