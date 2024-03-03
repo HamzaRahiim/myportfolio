@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Wrapper from "@/components/shared/Wrapper";
-import HeroPosterr from "@/assets/images/hamzarahim.png";
 import Button from "@/components/shared/Button";
 import { heroData } from "@/lib/db";
 import { HeroType } from "@/types";
