@@ -1,7 +1,7 @@
 import Wrapper from "@/components/shared/Wrapper";
 import Circle from "@/components/shared/Circle";
 
-const Skills = () => {
+const Skills = async () => {
   return (
     <section>
       <Wrapper>

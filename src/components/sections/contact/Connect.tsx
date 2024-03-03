@@ -5,7 +5,7 @@ const Connect = () => {
   return (
     <section>
       <Wrapper>
-        <main className="">
+        <main>
           {/* title */}
           <div className="p-4">
             <h1 className="text-2xl font-medium sm:text-3xl">

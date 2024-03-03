@@ -1,34 +1,27 @@
-import project1 from "@/assets/images/product-001.png";
-import project2 from "@/assets/images/school-Management-System.png";
+import { projectData } from "@/lib/db";
+import { Project } from "@/types";
 import Image from "next/image";
-// data
-const dbdata = [
-  {
-    picName: project1,
-    title: "Ecommerce website",
-    altName: "project picture",
-  },
-  {
-    picName: project2,
-    title: "School Management System",
-    altName: "project picture",
-  },
-];
+import Link from "next/link";
+import { urlForImage } from "../../../sanity/lib/image";
+
 // components reusable
-const Boxes = () => {
+const Boxes = async () => {
+  const projects: Project[] = await projectData();
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between">
-        {dbdata.map((item, index) => (
-          <div className="px-2" key={index}>
-            <Image
-              src={item.picName}
-              alt={item.altName}
-              width={230}
-              height={180}
-              className="rounded-lg border border-teal-950 mt-2 md:w-96 md:h-72"
-            />
-            <p className="text-center mb-4 pt-2">{item.title}</p>
+      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between hover:cursor-pointer">
+        {projects.map((project, index) => (
+          <div className="px-2 hover:scale-105 duration-300" key={index}>
+            <Link href={`${project.link}`} target="_blank">
+              <Image
+                src={urlForImage(project.image)}
+                alt={project.title}
+                width={230}
+                height={180}
+                className="rounded-lg border border-teal-950 mt-2 md:w-96 md:h-72"
+              />
+              <p className="text-center mb-4 pt-2">{project.title}</p>
+            </Link>
           </div>
         ))}
       </div>

@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className="mt-12">
       <Wrapper>
-        <div className="bg-pink-200 px-2">
+        <div className="bg-pink-200 px-2 bottom-0">
           {/* main text */}
           <div className="font-medium text-3xl pt-4">
             <h1>Contact Me:</h1>

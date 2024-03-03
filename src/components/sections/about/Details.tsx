@@ -1,14 +1,27 @@
 import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
-import poster from "@/assets/images/nextjs-poster.png";
 import Button from "@/components/shared/Button";
+import { aboutData } from "@/lib/db";
+import { AboutType } from "@/types";
+import { urlForImage } from "../../../../sanity/lib/image";
+import { PortableText } from "@portabletext/react";
+import { components } from "@/components/shared/SanityComponent";
 
-const Details = () => {
+const Details = async () => {
+  const abouts: AboutType | any = await aboutData();
+  console.log(abouts);
+  console.log(abouts.description);
   return (
     <section>
       {/* poster  */}
       <div className="w-full md:h-72 sm:h-48 h-32">
-        <Image src={poster} alt="my poster" className="w-full object-cover" />
+        <Image
+          src={urlForImage(abouts.image)}
+          width={500}
+          height={500}
+          alt="my poster"
+          className="w-full object-cover"
+        />
       </div>
       <Wrapper>
         <div className="flex mt-3 flex-col md:flex-row">
@@ -18,23 +31,12 @@ const Details = () => {
           </div>
           {/* About me right */}
           <div className="flex-1">
-            <p className="text-sm">
-              I am a Freelance Front-End Developer based in Pakistan. Armed with
-              expertise in Next.js, React, and Node.js, I breathe life into
-              websites with a blend of design finesse and functional prowess.
-              With a solid foundation in science from Islamia College and
-              currently pursuing a BBIT degree at the Virtual University of
-              Pakistan, I blend academic knowledge with practical skills gained
-              through freelancing and ongoing learning. Whether it&apos;s
-              crafting a new website or revamping an existing one, I am here to
-              transform your vision into a digital reality.
-              <br /> Currently, I am furthering my tech passion through hands-on
-              learning at PIAIC and refining my skills as a{" "}
-              <span className="font-sans font-medium text-lg text-[#166534]">
-                Certified Applied Cloud Generative AI Engineer
-              </span>
-              .
-            </p>
+            <section className="text-sm">
+              <PortableText
+                value={abouts.description}
+                components={components}
+              />
+            </section>
             <button className="my-6 hover:scale-105 duration-300">
               <Button text="Contact Me" link="/contactus" />
             </button>

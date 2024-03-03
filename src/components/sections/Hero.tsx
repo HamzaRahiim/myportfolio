@@ -2,8 +2,12 @@ import Image from "next/image";
 import Wrapper from "@/components/shared/Wrapper";
 import HeroPosterr from "@/assets/images/hamzarahim.png";
 import Button from "@/components/shared/Button";
+import { heroData } from "@/lib/db";
+import { HeroType } from "@/types";
+import { urlForImage } from "../../../sanity/lib/image";
 
-const Hero = () => {
+const Hero = async () => {
+  const heros: HeroType = await heroData();
   return (
     <section className="h-full flex justify-center">
       <Wrapper>
@@ -14,15 +18,18 @@ const Hero = () => {
               Hello Everyone, I am
             </p>
             <h1 className="font-bold text-4xl sm:text-6xl">Hamza Rahim</h1>
-            <h3 className="font-semibold text-3xl py-4 max-w-[500px]">
-              Front-end Developer Using{" "}
-              <span className="text-[#166534]">NextJs</span> &{" "}
-              <span className="text-[#166534]">React</span>
-            </h3>
-            <p className="max-w-[500px] text-gray-600">
-              Your website won&apos;t just look good, it will dance across any
-              screen.
-            </p>
+            <>
+              <h3 className="font-semibold text-3xl py-4 max-w-[500px]">
+                {heros.description}{" "}
+                <span className="text-[#166534]">{heros.heading1}</span> &{" "}
+                <span className="text-[#166534]">{heros.heading2}</span>
+              </h3>
+              <p className="max-w-[500px] text-gray-600">
+                {/* Your website won&apos;t just look good, it will dance across any
+                screen. */}
+                {heros.sentence}
+              </p>
+            </>
             <button className="py-4 my-2 hover:scale-105 duration-300">
               <Button link="/about" text="Learn More" />
             </button>
@@ -30,7 +37,9 @@ const Hero = () => {
           {/* right side */}
           <div className="md:flex-1 mt-2 order-first">
             <Image
-              src={HeroPosterr}
+              src={urlForImage(heros.image)}
+              width={500}
+              height={500}
               alt="Profile picure"
               className="mx-auto md:w-96 md:h-[500px] border-green-900 border-4 object-cover rounded-full w-60 h-60 sm:rounded-none sm:border-none"
             />
