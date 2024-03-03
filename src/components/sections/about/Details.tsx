@@ -9,8 +9,6 @@ import { components } from "@/components/shared/SanityComponent";
 
 const Details = async () => {
   const abouts: AboutType | any = await aboutData();
-  console.log(abouts);
-  console.log(abouts.description);
   return (
     <section>
       {/* poster  */}
