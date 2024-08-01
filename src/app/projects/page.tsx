@@ -1,5 +1,5 @@
 import Projct from "@/components/sections/project/Projct";
-export const revalidate = 172800;
+export const revalidate = 86400;
 
 const page = () => {
   return (

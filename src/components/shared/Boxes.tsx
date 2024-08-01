@@ -9,7 +9,7 @@ const Boxes = async () => {
   const projects: Project[] = await projectData();
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between hover:cursor-pointer">
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center hover:z-10 md:justify-between hover:cursor-pointer">
         {projects.map((project, index) => (
           <div className="px-2 hover:scale-105 duration-300" key={index}>
             <Link href={`${project.link}`} target="_blank">

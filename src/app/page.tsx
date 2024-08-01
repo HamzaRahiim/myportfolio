@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Skills from "@/components/sections/Skills";
 import React from "react";
 
-export const revalidate = 172800;
+export const revalidate = 86400;
 const Home = () => {
   return (
     <>

@@ -31,9 +31,17 @@ const Footer = () => {
           {/* contact options */}
           <div className="flex my-3 pl-2 flex-col md:flex-row">
             <div className="flex-1">
-              <p>Email: hamzarahim836@gmail.com</p>
               <p>
-                Contact No: {"("}+92{")"}-315-0311920
+                Email:{" "}
+                <Link href={`mailto:hamzarahim836@gmail.com`}>
+                  hamzarahim836@gmail.com
+                </Link>
+              </p>
+              <p>
+                Contact No:{" "}
+                <Link
+                  href={`whatsapp://send?phone=+923150311920`}
+                >{`(+92)-3150311920`}</Link>
               </p>
             </div>
             <div className="flex-1">

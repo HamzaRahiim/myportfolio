@@ -12,7 +12,7 @@ const Header = () => {
     setNav(!nav);
   };
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-50">
       <Wrapper>
         <div className="flex justify-between max-w-screen-xl mx-auto bg-slate-200 px-4 py-2 items-center">
           {/* logo */}

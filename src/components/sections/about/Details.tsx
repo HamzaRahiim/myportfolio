@@ -12,7 +12,7 @@ const Details = async () => {
   return (
     <section>
       {/* poster  */}
-      <div className="w-full md:h-72 sm:h-48 h-32">
+      <div className="w-full md:h-72 sm:h-40 h-24">
         <Image
           src={urlForImage(abouts.image)}
           width={500}
@@ -22,10 +22,10 @@ const Details = async () => {
         />
       </div>
       <Wrapper>
-        <div className="flex mt-3 flex-col md:flex-row">
+        <div className="flex sm:mt-3 flex-col md:flex-row">
           {/* About me left */}
           <div className="flex-1">
-            <h1 className="font-medium text-3xl">About Me:</h1>
+            <h1 className="font-medium text-3xl mb-2 md:mb-0">About Me:</h1>
           </div>
           {/* About me right */}
           <div className="flex-1">
